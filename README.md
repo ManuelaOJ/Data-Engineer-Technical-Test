@@ -1,5 +1,5 @@
 # Data Engineer Technical Test  
-*sun valley investments*
+*SV‑Exploration · OreOptix AI*
 
 Welcome! This 24‑hour challenge assesses your ability to **orchestrate data pipelines**, **automate ingestion**, and **handle unstructured sources (PDF)**.  
 The structure and deliverables mirror our Data Engineer test.
@@ -37,10 +37,11 @@ Extract structured financial tables and load them into a Silver dataset.
 
 **Instructions**
 1. Inside the **Consolidated Financial Statements** PDFs, locate the *Statement of Profit or Loss*.  
-2. Extract the table and normalise headers (`Revenue`, `Cost of Sales`, `EBITDA`, etc.).  
-3. Write each quarter to `silver/income_statements.parquet` with columns:  
+2. **Select any 4 key financial metrics** from the statements (e.g., Revenue, Gross Profit, Operating Expenses, Net Income, etc.).  
+3. Extract these metrics for **all available quarters** and normalize the data.  
+4. Write consolidated data to `silver/income_statements.parquet` with columns:  
    `year`, `quarter`, `metric`, `value_local`, `currency`.  
-4. Implement a **data‑quality rule**: compute the **% of expected metrics present** and log it to `dq_log.jsonl`.
+5. Implement a **data‑quality rule**: compute the **% of selected metrics present per quarter** and log results to `dq_log.jsonl`.
 
 ---
 
@@ -86,7 +87,7 @@ your_name_DataEngTest/
 
 **Example README structure:**
 ```markdown
-# [Your Name] - sun valley investments Data Engineering Test
+# [Your Name] - Mineros S.A. Data Engineering Test
 
 ## Prerequisites
 - Python 3.8+
@@ -158,4 +159,3 @@ Provide up to **6 slides** covering:
 ---
 
 Good luck!
-
