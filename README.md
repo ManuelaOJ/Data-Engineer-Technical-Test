@@ -67,3 +67,52 @@ Build a minimal scheduler and configure CI with lint + tests.
 
 Organise your repository as follows:
 
+your_name_DataEngTest/
+├── task1/ # ingestion code / notebook
+├── task2/ # extraction + silver layer
+├── task3/ # orchestration + CI config
+├── .ppt # max 6‑slide presentation
+└── README.md # how to run everything
+
+
+Push to a **public GitHub repository** (or deliver a ZIP).  
+Ensure the GitHub Actions workflow passes.
+
+---
+
+## 📊  Presentation (.ppt)
+
+Provide up to **6 slides** covering:
+
+1. Approach for each task.  
+2. Tools and libraries used.  
+3. Pipeline architecture diagram (Bronze → Silver).  
+4. Validation results & logs.  
+5. Improvement ideas.
+
+---
+
+## ✅  Evaluation Criteria  
+
+| Aspect                                  | Weight |
+|-----------------------------------------|--------|
+| Correctness of ingestion & extraction   | 35 % |
+| Pipeline orchestration & idempotence    | 25 % |
+| Code quality (structure, style, tests)  | 20 % |
+| Data‑quality logging & validation       | 10 % |
+| Clarity of the presentation             | 10 % |
+
+---
+
+## ⏱️  Time Limit & Delivery
+
+- **24 hours** from receiving this brief.  
+- Send the repository link (or ZIP) and the last commit SHA to  
+  **reclutamiento@sunvalleyinvestment.com**.  
+- Technical questions will be answered only within the first **4 hours**.
+
+---
+
+Good luck!
+
+
