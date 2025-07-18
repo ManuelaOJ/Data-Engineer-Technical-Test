@@ -2,7 +2,7 @@
 *SV‑Exploration · OreOptix AI*
 
 Welcome! This 24‑hour challenge assesses your ability to **orchestrate data pipelines**, **automate ingestion**, and **handle unstructured sources (PDF)**.  
-The structure and deliverables mirror our GeoAI Engineer test.
+The structure and deliverables mirror our Data Engineer test.
 
 ---
 
