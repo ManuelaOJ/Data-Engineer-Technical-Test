@@ -67,12 +67,13 @@ Build a minimal scheduler and configure CI with lint + tests.
 
 Organise your repository as follows:
 
+```text
 your_name_DataEngTest/
-├── task1/ # ingestion code / notebook
-├── task2/ # extraction + silver layer
-├── task3/ # orchestration + CI config
-├── .ppt # max 6‑slide presentation
-└── README.md # how to run everything
+├── task1/               # ingestion code / notebook
+├── task2/               # extraction + silver layer
+├── task3/               # orchestration + CI config
+├── .ppt                 # max 6‑slide presentation
+└── README.md            # how to run everything
 
 
 Push to a **public GitHub repository** (or deliver a ZIP).  
