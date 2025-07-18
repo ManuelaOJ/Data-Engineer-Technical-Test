@@ -1,5 +1,5 @@
 # Data Engineer Technical Test  
-*SV‑Exploration · OreOptix AI*
+*sun valley investments*
 
 Welcome! This 24‑hour challenge assesses your ability to **orchestrate data pipelines**, **automate ingestion**, and **handle unstructured sources (PDF)**.  
 The structure and deliverables mirror our Data Engineer test.
@@ -86,7 +86,7 @@ your_name_DataEngTest/
 
 **Example README structure:**
 ```markdown
-# [Your Name] - Mineros S.A. Data Engineering Test
+# [Your Name] - sun valley investments Data Engineering Test
 
 ## Prerequisites
 - Python 3.8+
