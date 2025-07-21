@@ -31,7 +31,7 @@ During the exercise you will:
   </li>
 
   <li>
-    <strong>Download exclusively the quarterly "Consolidated Financial Statements" PDFs (Q1, Q2, Q3, Q4) published between 2021 and 2024.</strong><br>
+    <strong>Download exclusively the quarterly "Consolidated Financial Statements" PDFs (Q1, Q2, Q3, Q4) published between 2021 and 2025.</strong><br>
     Do <strong>not</strong> include other types of reports.
   </li>
   <img width="1167" height="673" alt="image" src="https://github.com/user-attachments/assets/98296fbc-5c3c-4470-8f8a-283420152fb9" />
