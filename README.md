@@ -1,4 +1,4 @@
-# Data Engineer Technical Test  
+# Data Engineer - Technical Test  
 *SV‑Exploration · OreOptix AI*
 
 Welcome! This 24‑hour challenge assesses your ability to **orchestrate data pipelines**, **automate ingestion**, and **handle unstructured sources (PDF)**.  
