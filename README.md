@@ -188,7 +188,7 @@ Design a complete and scalable solution to automate the extraction of structured
 Explain how you would design a robust and automated pipeline that:
 </p>
 <ul>
-  <li>Processes multiple quarterly PDF reports from 2021 to 2024.</li>
+  <li>Processes multiple quarterly PDF reports from 2021 to 2025.</li>
   <li>Extracts tables from:
     <ul>
       <li><strong>Vector-based PDFs</strong> (standard text-based content)</li>
