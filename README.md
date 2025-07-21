@@ -273,17 +273,27 @@ Outline how the full solution would be deployed in <strong>Microsoft Azure</stro
 
 ---
 
-## 🚚 Submission Instructions  
+<h3>🚚 Submission Instructions</h3>
 
-Organise your repository as follows:
+<p>Please organize your submission using the following folder structure:</p>
 
-```
+<pre>
 your_name_DataEngTest/
-├── task1/               # Ingestion code / notebook
-├── task2/               # Extraction + silver layer
-├── task3/               # Orchestration + CI config
-├── presentation.ppt     # Max 6-slide presentation
-└── README.md           # How to run everything
+├── task1/               # Ingestion code or notebook
+├── task2/               # Table extraction and silver layer output
+├── task3/               # Orchestration plan, architecture design, and CI discussion
+├── presentation.ppt     # Optional: up to 6-slide summary of your solution
+└── README.md            # High-level overview and how to run each task
+</pre>
+
+<p><strong>Notes:</strong></p>
+<ul>
+  <li>Use clear and modular code (e.g., Python scripts or notebooks).</li>
+  <li>Document all steps and assumptions directly in the code or notebooks.</li>
+  <li>For Task 3, include both your written explanation and the required architecture diagram.</li>
+  <li>If needed, use comments or markdown cells to explain decisions or limitations.</li>
+</ul>
+
 ```
 
 **Repository Requirements:**
