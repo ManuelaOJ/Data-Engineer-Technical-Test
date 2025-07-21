@@ -142,18 +142,114 @@ During the exercise you will:
 
 ---
 
-### ✅ Task 3 – Orchestration & CI/CD  
-**Goal**  
-Build a minimal scheduler and configure CI with lint + tests.
+<h3>✅ Task 3 – Pipeline Design, Orchestration & LLM-Ready Data Strategy</h3>
 
-**Instructions**
-1. Use **Prefect**, **Airflow**, or a custom Python CLI (`pipeline.py run all`).  
-2. Pipeline stages: `ingest → extract → quality_check`.  
-3. Provide a **GitHub Actions** workflow that:  
-   - Installs dependencies.  
-   - Runs `black --check` + `ruff`.  
-   - Executes unit tests in `tests/`.  
-4. Include a sample `pytest` that mocks one PDF and asserts correct Parquet output.
+<h4>📘 Overview</h4>
+<p>
+This is a <strong>theoretical design challenge</strong>. You are not expected to write code or build a working solution.
+Instead, we will assess your ability to:
+</p>
+<ul>
+  <li>Design scalable and modular data architectures</li>
+  <li>Select appropriate tools and technologies</li>
+  <li>Communicate complex pipelines visually and logically</li>
+  <li>Think critically about automation, AI-readiness, and cloud infrastructure</li>
+</ul>
+
+<hr>
+
+<h4>🎯 Goal</h4>
+<p>
+Design a complete and scalable solution to automate the extraction of structured information from quarterly financial reports (PDFs), including documents that contain tables embedded as images. Propose a clear architecture to orchestrate and deploy the entire process in the cloud, preferably using Azure.
+</p>
+
+<h4>🧩 Part 1 – Strategy for Scalable Table Extraction</h4>
+<p>
+Explain how you would design a robust and automated pipeline that:
+</p>
+<ul>
+  <li>Processes multiple quarterly PDF reports from 2021 to 2024.</li>
+  <li>Extracts tables from:
+    <ul>
+      <li><strong>Vector-based PDFs</strong> (standard text-based content)</li>
+      <li><strong>Non-vector PDFs</strong> (scanned images or embedded table graphics)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Your proposal must include:</strong></p>
+<ul>
+  <li>Preprocessing steps and tools (e.g., OCR, table detection)</li>
+  <li>Libraries or frameworks (e.g., <code>pdfplumber</code>, <code>camelot</code>, <code>layoutparser</code>, <code>docTR</code>, <code>tesseract</code>)</li>
+  <li>Optional use of LLMs or computer vision models to improve accuracy and structure</li>
+</ul>
+
+<h4>⚙️ Part 2 – Orchestration and Automation</h4>
+<p>
+Design a modular and scalable orchestration strategy to automate the full workflow:
+</p>
+<ul>
+  <li>Automatic detection of new files</li>
+  <li>Execution of ingestion, extraction, validation and storage across <strong>Bronze → Silver → Gold</strong> layers</li>
+  <li>Metadata tracking, logging, and lineage</li>
+</ul>
+
+<p><strong>Be sure to describe:</strong></p>
+<ul>
+  <li>The orchestration tools you'd use (e.g., <code>Airflow</code>, <code>Azure Data Factory</code>, <code>Prefect</code>)</li>
+  <li>How you'd handle scheduling, retries, versioning, and scale</li>
+</ul>
+
+<h4>🤖 Part 3 – Gold Layer Design for ML & LLMs</h4>
+<p>
+Describe how you would structure a <strong>Gold layer</strong> suitable for:
+</p>
+<ul>
+  <li>Machine learning pipelines (e.g., time series, anomaly detection)</li>
+  <li>LLM-based applications and Retrieval-Augmented Generation (RAG)</li>
+</ul>
+
+<p><strong>Your design should consider:</strong></p>
+<ul>
+  <li>Normalization and linking of metrics across quarters</li>
+  <li>Multilingual support (e.g., English and Spanish)</li>
+  <li>Standardized formats (currency, dates, taxonomy)</li>
+  <li>Output formats compatible with LLMs (e.g., JSONL, entity-level tables, embedding-friendly formats)</li>
+</ul>
+
+<h4>☁️ Part 4 – Cloud Architecture in Azure</h4>
+<p>
+Outline how the full solution would be deployed in <strong>Microsoft Azure</strong>:
+</p>
+<ul>
+  <li><strong>Storage:</strong> Azure Data Lake, Blob Storage, Delta Lake</li>
+  <li><strong>Compute:</strong> Azure ML, Azure Functions, Databricks</li>
+  <li><strong>Monitoring:</strong> logging, retries, alerting, dashboards</li>
+  <li><strong>Security:</strong> RBAC, Key Vault, service principals</li>
+</ul>
+
+<h4>📐 Deliverables</h4>
+<ol>
+  <li>
+    A technical explanation in <code>.md</code>, <code>.ipynb</code> or PDF format covering all four parts.
+  </li>
+  <li>
+    A <strong>mandatory architecture diagram</strong> illustrating your proposed pipeline.
+    <ul>
+      <li>Use tools like draw.io, Lucidchart, Excalidraw, etc.</li>
+      <li>The diagram must show the flow from ingestion to the Gold layer.</li>
+      <li>Clearly identify components for orchestration, storage, and any AI/LLM integration points.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4>📌 Evaluation Criteria</h4>
+<ul>
+  <li>Clarity and modularity of the proposed architecture</li>
+  <li>Appropriate use of tools and technologies</li>
+  <li>Scalability, maintainability, and automation potential</li>
+  <li>Ability to communicate complex processes through visual design</li>
+</ul>
 
 ---
 
