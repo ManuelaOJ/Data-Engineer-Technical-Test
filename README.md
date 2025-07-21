@@ -66,17 +66,79 @@ During the exercise you will:
 
 ---
 
-### ✅ Task 2 – Table Extraction & Silver Layer  
-**Goal**  
-Extract structured financial tables and load them into a Silver dataset.
+<h3>✅ Task 2 – Table Extraction & Silver Layer</h3>
 
-**Instructions**
-1. Inside the **Consolidated Financial Statements** PDFs, locate the *Statement of Profit or Loss*.  
-2. **Select any 4 key financial metrics** from the statements (e.g., Revenue, Gross Profit, Operating Expenses, Net Income, etc.).  
-3. Extract these metrics for **all available quarters** and normalize the data.  
-4. Write consolidated data to `silver/income_statements.parquet` with columns:  
-   `year`, `quarter`, `metric`, `value_local`, `currency`.  
-5. Implement a **data‑quality rule**: compute the **% of selected metrics present per quarter** and log results to `dq_log.jsonl`.
+<h4>🎯 Goal</h4>
+<p>
+  Extract <strong>all structured tables</strong> from the PDF report
+  <strong>“Consolidated Financial Statements – Q1 2025”</strong> and convert them into a clean, flexible dataset
+  suitable for analysis (e.g., in Excel, pandas, or Power BI).
+</p>
+
+<h4>📝 Instructions</h4>
+<ol>
+  <li>
+    Use <strong>only</strong> the following PDF file, already downloaded in Task 1:<br>
+    <code>bronze/2025_Q1/Consolidated_Financial_Statements_Q1_2025.pdf</code>
+  </li>
+
+  <li>
+    From this single report, <strong>extract all tables</strong> that are presented in a structured format.<br>
+    Do <strong>not</strong> filter or limit the content — include all identifiable tabular data found in the document.
+  </li>
+
+  <li>
+    Convert the extracted tables into a <strong>normalized (long) format</strong>, where each row represents a single data point.<br>
+    Save the entire output in a single Parquet file:<br>
+    <code>silver/q1_2025_tables.parquet</code>
+  </li>
+
+  <li>
+    Each row in the resulting dataset should include the following fields when applicable:
+    <ul>
+      <li><code>table_name</code> – name or title of the table (if available)</li>
+      <li><code>row_label</code> – description of the row (e.g., “Revenue”, “Total Assets”)</li>
+      <li><code>column_header</code> – the header or period (e.g., “Q1 2025”, “Q1 2024”)</li>
+      <li><code>value</code> – extracted numeric value</li>
+      <li><code>currency</code> – default to USD unless stated otherwise</li>
+      <li><code>page_number</code> – page number in the PDF where the table appears</li>
+    </ul>
+  </li>
+
+  <li>
+    You may use any tool or library you prefer to perform the extraction, such as:
+    <ul>
+      <li><code>pdfplumber</code></li>
+      <li><code>camelot</code></li>
+      <li><code>tabula</code></li>
+      <li><code>PyMuPDF</code></li>
+    </ul>
+  </li>
+
+  <li>
+    Optionally, you may use <strong>LLMs or AI-based tools</strong> to:
+    <ul>
+      <li>Assist in identifying table regions</li>
+      <li>Normalize ambiguous row/column labels</li>
+      <li>Handle messy or merged table cells</li>
+    </ul>
+  </li>
+</ol>
+
+<h4>📌 Notes</h4>
+<ul>
+  <li>
+    This task simulates a typical Silver-layer transformation:
+    converting semi-structured PDF content into structured, liquid data.
+  </li>
+  <li>
+    You do not need to clean or interpret the content — just extract and organize it into a format
+    that is easy to manipulate in spreadsheets or pipelines.
+  </li>
+  <li>
+    <strong>Only the Q1 2025 report should be used.</strong> Do not process any other quarterly files.
+  </li>
+</ul>
 
 ---
 
