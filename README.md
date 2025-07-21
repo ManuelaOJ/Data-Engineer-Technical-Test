@@ -14,20 +14,53 @@ During the exercise you will:
 
 ---
 
-## 📂 Tasks  
+<h3>✅ Task 1 – Automated Report Ingestion</h3>
 
-### ✅ Task 1 – Automated Report Ingestion  
-**Goal**  
-Build a repeatable process that downloads company reports and stores them in a Bronze layer.
+<h4>Goal</h4>
+<p>
+  Build a repeatable and idempotent process that automatically downloads company reports and stores them in the Bronze layer.
+</p>
 
-**Instructions**
-1. Visit **Mineros S.A. Financial Reports**  
-   <https://www.mineros.com.co/investors/financial-reports>  
-2. Download exclusively the quarterly "Consolidated Financial Statements" PDFs (Q1, Q2, Q3, Q4) published between 2021 and 2024. Do not include other types of reports.
-3. For each file:  
-   - Save it unchanged in `bronze/<year>_Q<quarter>/` (e.g., `bronze/2023_Q4/`).  
-   - Record `filename`, `filesize`, `sha256`, and `download_timestamp` in `metadata_bronze.parquet`.  
-4. The ingestion must be **idempotent**: if a file with the same hash already exists, skip it.
+<h4>Instructions</h4>
+<ol>
+  <li>
+    Visit the <strong>Mineros S.A. Financial Reports</strong> page:<br>
+    <a href="https://www.mineros.com.co/investors/financial-reports" target="_blank">
+      https://www.mineros.com.co/investors/financial-reports
+    </a>
+  </li>
+
+  <li>
+    <strong>Download exclusively the quarterly "Consolidated Financial Statements" PDFs (Q1, Q2, Q3, Q4) published between 2021 and 2024.</strong><br>
+    Do <strong>not</strong> include other types of reports.
+  </li>
+
+  <li>
+    Save each file <strong>unchanged</strong> in the following folder structure:<br>
+    <code>bronze/&lt;year&gt;_Q&lt;quarter&gt;/&lt;filename&gt;.pdf</code><br>
+    Example: <code>bronze/2023_Q4/Consolidated_Financial_Statements_Q4_2023.pdf</code>
+  </li>
+
+  <li>
+    For each downloaded file, register the following metadata in a single Parquet file named <code>metadata_bronze.parquet</code>:
+    <ul>
+      <li><code>filename</code></li>
+      <li><code>filesize</code> (in bytes)</li>
+      <li><code>sha256</code> (hash of the file)</li>
+      <li><code>download_timestamp</code> (UTC)</li>
+    </ul>
+  </li>
+
+  <li>
+    The process must be <strong>idempotent</strong>:<br>
+    If a file with the same SHA256 hash already exists in the metadata, it should be skipped.
+  </li>
+
+  <li>
+    You are free to use any tools or scripting languages you prefer to automate the solution (e.g., Python, Bash, Puppeteer, RPA, etc.).
+  </li>
+</ol>
+
 
 ---
 
