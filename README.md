@@ -321,34 +321,6 @@ your_name_DataEngTest/
 pip install -r requirements.txt
 ```
 
-## How to Run Everything
-
-### Task 1: Download Reports
-```bash
-cd task1
-python ingest_reports.py
-```
-
-### Task 2: Extract Tables  
-```bash
-cd task2
-python extract_tables.py
-```
-
-### Task 3: Run Complete Pipeline
-```bash
-cd task3
-python pipeline.py run all
-```
-
-## Expected Outputs
-- `bronze/` folders with PDFs organized by year/quarter
-- `silver/income_statements.parquet`
-- `metadata_bronze.parquet`
-- `dq_log.jsonl`
-
-**Execution time**: ~15-20 minutes
-```
 
 ---
 
@@ -356,8 +328,8 @@ python pipeline.py run all
 Provide up to **6 slides** covering:
 1. Approach for each task.  
 2. Tools and libraries used.  
-3. Pipeline architecture diagram (Bronze → Silver).  
-4. Validation results & logs.  
+3. Pipeline architecture diagram 
+4. Validation results   
 5. Improvement ideas.
 
 ---
@@ -376,7 +348,7 @@ Provide up to **6 slides** covering:
 ## ⏱️ Time Limit & Delivery
 - **24 hours** from receiving this brief.  
 - Send the repository link (or ZIP) and the last commit SHA to  
-  **reclutamiento@sunvalleyinvestment.com**.  
+  **ogaspar@oceloteminerals.com**.  
 - Technical questions will be answered only within the first **4 hours**.
 
 ---
