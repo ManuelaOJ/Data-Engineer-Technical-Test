@@ -6,11 +6,32 @@ The structure and deliverables mirror our Data Engineer test.
 
 ---
 
-## 📌 Overview  
-During the exercise you will:
-1. **Ingest** unstructured PDF reports from a public website.  
-2. **Transform** the information into **Bronze → Silver** layers with proper logging.  
-3. **Orchestrate & validate** the pipeline using CI/CD best practices.
+<h3>📌 Overview</h3>
+
+<p>
+During this 24-hour technical challenge, you will demonstrate your ability to design and implement modern data pipelines using real-world, semi-structured data sources.
+</p>
+
+<p>You are expected to:</p>
+<ol>
+  <li>
+    <strong>Ingest</strong> unstructured quarterly PDF reports from a public financial website and store them in a raw <code>bronze</code> layer with metadata and version control.
+  </li>
+  <li>
+    <strong>Extract and normalize</strong> all tabular data from one specific report (<em>Q1 2025</em>), converting it into a structured, analysis-friendly <code>silver</code> dataset.
+  </li>
+  <li>
+    <strong>Design a scalable pipeline architecture</strong> that can orchestrate the end-to-end workflow, support extraction from scanned tables (images), and prepare AI-ready <code>gold</code> data suitable for downstream use by ML models and LLMs.
+  </li>
+</ol>
+
+<p><strong>Your work will be assessed based on:</strong></p>
+<ul>
+  <li>Automation, modularity, and reproducibility</li>
+  <li>Data modeling, normalization, and metadata tracking</li>
+  <li>Scalability and cloud-readiness of your architecture</li>
+  <li>Clarity and professionalism in documentation and diagrams</li>
+</ul>
 
 ---
 
