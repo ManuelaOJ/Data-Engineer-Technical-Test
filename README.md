@@ -23,7 +23,7 @@ Build a repeatable process that downloads company reports and stores them in a B
 **Instructions**
 1. Visit **Mineros S.A. Financial Reports**  
    <https://www.mineros.com.co/investors/financial-reports>  
-2. Download **all PDFs** published between **2021 and 2024**.  
+2. Download **all PDFs: Consolidated Financial Statements** published between **2021 and 2024**.  
 3. For each file:  
    - Save it unchanged in `bronze/<year>_Q<quarter>/` (e.g., `bronze/2023_Q4/`).  
    - Record `filename`, `filesize`, `sha256`, and `download_timestamp` in `metadata_bronze.parquet`.  
