@@ -298,7 +298,6 @@ your_name_DataEngTest/
 
 **Repository Requirements:**
 - Push to a **public GitHub repository** (or deliver a ZIP)
-- Ensure the GitHub Actions workflow passes
 - Include a comprehensive `README.md` with step-by-step execution instructions
 
 **README.md Must Include:**
@@ -307,19 +306,6 @@ your_name_DataEngTest/
 - Complete pipeline execution instructions
 - Expected outputs and file locations
 - Estimated execution time
-
-**Example README structure:**
-```markdown
-# [Your Name] - Mineros S.A. Data Engineering Test
-
-## Prerequisites
-- Python 3.8+
-- Required packages: pandas, PyPDF2, requests, prefect
-
-## Installation
-```bash
-pip install -r requirements.txt
-```
 
 
 ---
@@ -343,13 +329,6 @@ Provide up to **6 slides** covering:
 | Data‑quality logging & validation       | 10%    |
 | Clarity of the presentation             | 10%    |
 
----
-
-## ⏱️ Time Limit & Delivery
-- **24 hours** from receiving this brief.  
-- Send the repository link (or ZIP) and the last commit SHA to  
-  **ogaspar@oceloteminerals.com**.  
-- Technical questions will be answered only within the first **4 hours**.
 
 ---
 
