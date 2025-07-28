@@ -1,0 +1,7 @@
+beautifulsoup4
+requests
+pandas
+requests
+pyarrow
+fastparquet
+pdfplumber
